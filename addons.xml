@@ -1,6 +1,168 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="skin.zouniflix" version="1.0.5" name="(fuse)neue" provider-name="jurialmunkey">
+
+<addon id="plugin.video.AliveGR" name="Zouniflix" version="2.0.8" provider-name="Twilight0">
+    <requires>
+        <import addon="xbmc.python" version="2.25.0"/>
+        <import addon="resource.images.alivegr.artwork" version="3.0.5"/>
+        <import addon="resource.images.alivegr.logos" version="1.0.2"/>
+<!--        <import addon="script.module.youtube.dl" version="18.619.0" optional="true"/>-->
+        <import addon="script.module.resolveurl" version="5.0.37" optional="true"/>
+        <import addon="script.module.streamlink.base" version="2020.01.28"/>
+        <import addon="script.module.tulip" version="2.5.5"/>
+        <import addon="plugin.video.youtube" version="6.6.0"/>
+        <import addon="script.module.pyxbmct" version="1.2.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video audio image executable</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <reuselanguageinvoker>false</reuselanguageinvoker>
+        <summary lang="en">AliveGR addon for Kodi media center</summary>
+        <description lang="en_GB">AliveGR is an addon allowing streaming content available mostly in Greek language.</description>
+        <disclaimer lang="en_GB">AliveGR's author does not host, stream or distribute any of the content displayed inside this software and cannot be held responsible for the quality or availability of the listed streams.
+On demand content is scraped from various websites and is freely available on the internet on public domains. This software acts only as a search engine.
+Kindly note that AliveGR is not an official part of the media player you are running, and therefore not to be mentioned within official support channels, this addon has nothing to do with the media player itself, nor it’s intended use, it is simply a third party plugin which has been added to your system and it is provided "as is" with no warranty.</disclaimer>
+        <summary lang="el_GR">AliveGR, Μικροεφαρμογή για το Kodi κέντρου πολυμέσων</summary>
+        <description lang="el_GR">Το πρόσθετο AliveGR επιτρέπει την θέαση ροών με περιεχόμενο κυρίως εις την Ελληνική γλώσσα.</description>
+        <disclaimer lang="el_GR">Ο δημιουργός του AliveGR δεν φιλοξενεί ή παρέχει οποιοδήποτε από τα απεικονιζόμενα πολυμέσα και περιεχόμένο εντός του μενού του και δεν μπορεί να θεωρηθεί υπεύθυνος για την ποιότητα ή την διαθεσιμότητα των ροών.
+Το περιεχόμενο αναπαραγωγής κατά βούληση φιλτράρεται από διάφορες ιστοσελίδες ελεύθερα διαθέσιμες στο διαδίκτυο σε δημόσιους ιστότοπους. Το παρόν λογισμικό ενεργεί μόνο ως μηχανή αναζήτησης.
+Παρακαλώ προσέξτε ότι το AliveGR δεν είναι επίσημο κομμάτι του Kodi αναπαραγωγέα πολυμέσων ή της καθορισμένης χρήσης του, είναι απλά μία μικροεφαρμογή που προστέθηκε στο σύστημά σας και που παρέχεται "όπως είναι" χωρίς εγγύηση.</disclaimer>
+        <language>en el</language>
+        <license>GNU GPL, version 2</license>
+        <forum>https://bitbucket.org/thgiliwt/plugin.video.alivegr/issues</forum>
+        <source>https://bitbucket.org/thgiliwt/plugin.video.alivegr</source>
+        <website>https://alivegr.net/</website>
+        <size>584908</size>
+        <news>+ [B]2.0.X[/B] [COLOR green](30-01-2020)[/COLOR]
+- Complete Python 3 support (Kodi ver.19+)
+- Rework of several modules and functions
+- Removed donation links from welcome message
+- Re-added several menu items in kids section, including the addition of a new one
+- Changed the way alternative/unofficial live/vod streams are enabled
+- Removed openload streamlink plugin and accompanying settings
+- Removed resolving capability on youtube externally
+- Added several plugins for streamlink to resolve videos from official sources
+- Added the ability to pin live channels
+- Added a new menu item to view and send logs
+- Revamped search functionality
+- Simplified some settings items
+- Removed progress dialogs
+- New random movie pick (50ies, 60ies, 70ies, 80ies, kids)
+  > Ability to select from a random one or multiple ones as pseudo live playlist
+- Several bug fixes</news>
+        <assets>
+            <icon>resources/media/icon.png</icon>
+            <fanart>resources/media/fanart.jpg</fanart>
+            <!--<screenshot>resources/alivegr-1.jpg</screenshot>-->
+        </assets>
+    </extension>
+</addon>
+
+<addon id="plugin.video.filmnet" version="3.1.9" name="Zouniflix" provider-name="Filmnet Devs Team">
+    <requires>
+        <import addon="xbmc.python" version="2.24.0" />
+        <import addon="resource.images.filmnet.artwork" version="2.0.0" />
+        <import addon="script.filmnet.metadata" version="2.0.0" />
+        <import addon="script.module.resolveurl" version="5.0.00"/>
+        <import addon="script.module.requests" version="2.22.0" />
+        <import addon="script.trakt" optional="true" version="3.2.4" />
+		<import addon="context.trakt.contextmenu" optional="true" version="1.0.4" />
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="filmnet.py">
+        <provides>video executable</provides>
+    </extension>
+    <extension point="xbmc.service" library="service.py" start="startup" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Filmnet</summary>
+        <reuselanguageinvoker>false</reuselanguageinvoker>
+        <platform>all</platform>
+        <description lang="en">[I]A New Generation[/I][CR][CR][B]Filmnet Movies and TV.[/B][CR][CR]This addon does not form part of the Kodi Media Centre. Please do not seek assistance or support for this addon on any of the Official Kodi Support Channels.</description>
+        <description lang="el">[I]Μία νέα γενιά[/I][CR][CR][B]Filmnet Ταινίες και Τηλεόραση[/B][CR][CR]Το πρόσθετο αυτό δεν αποτελεί μέρος του συστήματος πολυμέσων Kodi. Παρακαλώ μην αναζητήσετε βοήθεια ή υποστήριξη για το παρόν πρόσθετο σε οποιοδήποτε επίσημο κανάλι υποστήριξης του Kodi.</description>
+        <disclaimer lang="en">The author does not host any of the content in this addon and cannot be held responsible or liable for the content found.[CR][CR]The author of this addon has no affiliation with any of the content providers. This addon simply searches websites for content. Use at your own risk!</disclaimer>
+        <disclaimer lang="el">Ο δημιουργός δεν φιλοξενεί οποιοδήποτε από τα απεικονιζόμενα πολυμέσα και δεν μπορεί να θεωρηθεί υπεύθυνος ή υπόλογος γι' αυτά. Ο δημιουργός δεν έχει απολύτως καμία σχέση, επαφή ή επικοινωνία με τους φιλοξενητές του περιεχομένου. Το πρόσθετο απλά εκτελεί αναζήτηση σε δημόσιους ιστότοπους για περιεχόμενο. Χρησιμοποιείται με αποκλειστική ευθύνη των τελικών χρηστών.</disclaimer>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+        <!--<forum></forum>-->
+        <!--<website></website>-->
+        <!--<source></source>-->
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+                <!--<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>-->
+                <!--<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>-->
+                <!--<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>-->
+        </assets>
+        <news>+ 3.1.9
+- Update Greek Scrapers
+- Update scrapers</news>
+    </extension>
+</addon>
+
+<addon id="repository.zouniflix" name="Zouniflix repository" version="1.0" provider-name="Zouniflix repository">
+    <extension point="xbmc.addon.repository" name="Zouniflix repository">
+        <info compressed="false">https://raw.githubusercontent.com/zouniflix/zouniflix/master/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/zouniflix/zouniflix/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://github.com/zouniflix/zouniflix/raw/master/</datadir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Zouniflix repository</summary>
+        <description>test</description>
+        <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="resource.images.alivegr.artwork" name="AliveGR Artwork" version="3.0.5" provider-name="Twilight0">
+	<extension point="kodi.resource.images" compile="false" type="AliveGR" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">AliveGR's main artwork</summary>
+		<description lang="en">Artwork is distributed separately to allow easier maintenance and consume less bandwidth</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="resource.images.alivegr.logos" name="AliveGR TV Logos" version="1.0.2" provider-name="Twilight0">
+	<extension point="kodi.resource.images" compile="false" type="AliveGR" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">AliveGR's TV channels logos</summary>
+		<description lang="en">Logos are provided separately to allow easier distribution</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="resource.images.filmnet.artwork" name="Filmnet Artwork" version="2.0.0" provider-name="Filmnet Devs Team">
+	<extension point="kodi.resource.images" compile="false" type="Filmnet" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0"/>
+        <import addon="xbmc.python" version="2.24.0"/>
+	</requires>
+    <extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Themes for the Filmnet Addon</summary>
+		<description lang="en">Themes for the Filmnet Addon</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="script.filmnet.metadata" version="2.0.0" name="Filmnet Metadata" provider-name="Filmnet Devs Team">
+	<requires>
+		<import addon="xbmc.python" version="2.24.0"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary>Metadata for the Filmnet Addon</summary>
+		<description>Metadata for Filmnet are maintained separately to make distribution of the the addon itself easier/faster.</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="skin.zouniflix" version="1.0.4" name="(fuse)neue" provider-name="jurialmunkey">
     <requires>
         <import addon="xbmc.gui" version="5.12.0"/>
         <import addon="script.skin.helper.service" version="1.1.0"/>
@@ -32,4 +194,5 @@
         </assets>
     </extension>
 </addon>
+
 </addons>
