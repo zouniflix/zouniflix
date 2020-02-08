@@ -60,15 +60,15 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="plugin.video.filmnet" version="3.1.9" name="Zouniflix" provider-name="Filmnet Devs Team">
+<addon id="plugin.video.filmnet" version="3.1.10" name="Zouniflix" provider-name="Filmnet Devs Team">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
         <import addon="resource.images.filmnet.artwork" version="2.0.0" />
         <import addon="script.filmnet.metadata" version="2.0.0" />
         <import addon="script.module.resolveurl" version="5.0.00"/>
         <import addon="script.module.requests" version="2.22.0" />
-        <import addon="script.trakt" optional="true" version="3.2.4" />
-		<import addon="context.trakt.contextmenu" optional="true" version="1.0.4" />
+        <import addon="script.trakt" version="3.2.4" />
+		<import addon="context.trakt.contextmenu" version="1.0.4" />
     </requires>
     <extension point="xbmc.python.pluginsource" library="filmnet.py">
         <provides>video executable</provides>
@@ -93,8 +93,7 @@ Kindly note that AliveGR is not an official part of the media player you are run
                 <!--<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>-->
                 <!--<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>-->
         </assets>
-        <news>+ 3.1.9
-- Update Greek Scrapers
+        <news>+ 3.1.10
 - Update scrapers</news>
     </extension>
 </addon>
@@ -104,6 +103,21 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <info compressed="false">https://raw.githubusercontent.com/zouniflix/zouniflix/master/addons.xml</info>
         <checksum>https://raw.githubusercontent.com/zouniflix/zouniflix/master/addons.xml.md5</checksum>
         <datadir zip="true">https://github.com/zouniflix/zouniflix/raw/master/</datadir>
+			<dir>
+                <info compressed="false">https://raw.githubusercontent.com/Twilight0/repo.twilight0/master/_zips/addons.xml</info>
+                <checksum>https://raw.githubusercontent.com/Twilight0/repo.twilight0/master/_zips/addons.xml.md5</checksum>
+                <datadir zip="true">https://raw.githubusercontent.com/Twilight0/repo.twilight0/master/_zips/</datadir>
+            </dir>
+            <dir>
+                <info compressed="false">https://raw.githubusercontent.com/Twilight0/repo.twilight0.libs/master/_zips/addons.xml</info>
+                <checksum>https://raw.githubusercontent.com/Twilight0/repo.twilight0.libs/master/_zips/addons.xml.md5</checksum>
+                <datadir zip="true">https://raw.githubusercontent.com/Twilight0/repo.twilight0.libs/master/_zips/</datadir>
+            </dir>
+            <dir>
+                <info compressed="false">https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml</info>
+                <checksum>https://raw.githubusercontent.com/jsergio123/zips/master/addons.xml.md5</checksum>
+                <datadir zip="true">https://raw.githubusercontent.com/jsergio123/zips/master/</datadir>
+            </dir>
     </extension>
     <extension point="xbmc.addon.metadata">
         <summary>Zouniflix repository</summary>
