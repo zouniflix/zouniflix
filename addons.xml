@@ -67,8 +67,8 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <import addon="script.filmnet.metadata" version="2.0.0" />
         <import addon="script.module.resolveurl" version="5.0.00"/>
         <import addon="script.module.requests" version="2.22.0" />
-        <import addon="script.trakt" version="3.2.4" />
-		<import addon="context.trakt.contextmenu" version="1.0.4" optional="true" />
+        <import addon="script.trakt" optional="true" version="3.2.4" />
+		<import addon="context.trakt.contextmenu" optional="true" version="1.0.4" />
     </requires>
     <extension point="xbmc.python.pluginsource" library="filmnet.py">
         <provides>video executable</provides>
