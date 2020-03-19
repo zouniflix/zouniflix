@@ -60,7 +60,7 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="plugin.video.filmnet" version="3.1.10" name="Zouniflix" provider-name="Filmnet Devs Team">
+<addon id="plugin.video.filmnet" version="3.2.3" name="Zouniflix" provider-name="Filmnet Devs Team">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
         <import addon="resource.images.filmnet.artwork" version="2.0.0" />
@@ -91,8 +91,8 @@ Kindly note that AliveGR is not an official part of the media player you are run
                 <!--<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>-->
                 <!--<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>-->
         </assets>
-        <news>+ 3.1.10
-- Update scrapers</news>
+        <news>+ 3.2.3
+- fix trailer issues by adding NEW function</news>
     </extension>
 </addon>
 
