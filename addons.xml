@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
 
-<addon id="plugin.video.AliveGR" name="Zouniflix" version="2.0.8" provider-name="Twilight0">
+<addon id="plugin.video.AliveGR" name="Zouniflix" version="2.1.7" provider-name="Twilight0">
     <requires>
         <import addon="xbmc.python" version="2.25.0"/>
         <import addon="resource.images.alivegr.artwork" version="3.0.5"/>
@@ -35,7 +35,17 @@ Kindly note that AliveGR is not an official part of the media player you are run
         <source>https://bitbucket.org/thgiliwt/plugin.video.alivegr</source>
         <website>https://alivegr.net/</website>
         <size>584908</size>
-        <news>+ [B]2.0.X[/B] [COLOR green](30-01-2020)[/COLOR]
+        <news>+ [B]2.1.X[/B] [COLOR green]16-02-2020 -> 28-03-2020[/COLOR]
+- Added pseudo-live youtube-based play items
+- Inform user when unofficial streams are disabled
+- Fixed youtube api keys setup wizard
+- Disabled iptv setup action (will be re-enabled in a future release)
+- Cartoon items can now be disabled from showing up on main indexers
+- Tweaked streamlink plugins (ant1cy, skai, alphacy, ert, opentv)
+- Live groups are now in fixed order instead of dynamic (makes channel ordering more predictable)
+
+
++ [B]2.0.X[/B] [COLOR red](30-01-2020 -> 10-02-2020)[/COLOR]
 - Complete Python 3 support (Kodi ver.19+)
 - Rework of several modules and functions
 - Removed donation links from welcome message
@@ -46,6 +56,7 @@ Kindly note that AliveGR is not an official part of the media player you are run
 - Added several plugins for streamlink to resolve videos from official sources
 - Added the ability to pin live channels
 - Added a new menu item to view and send logs
+- Added an option to pick a stream randomly
 - Revamped search functionality
 - Simplified some settings items
 - Removed progress dialogs
@@ -60,7 +71,7 @@ Kindly note that AliveGR is not an official part of the media player you are run
     </extension>
 </addon>
 
-<addon id="plugin.video.filmnet" version="3.2.3" name="Zouniflix" provider-name="Filmnet Devs Team">
+<addon id="plugin.video.filmnet" version="3.2.6" name="Zouniflix" provider-name="Filmnet Devs Team">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
         <import addon="resource.images.filmnet.artwork" version="2.0.0" />
@@ -91,8 +102,8 @@ Kindly note that AliveGR is not an official part of the media player you are run
                 <!--<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>-->
                 <!--<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>-->
         </assets>
-        <news>+ 3.2.3
-- fix trailer issues by adding NEW function</news>
+        <news>+ 3.2.6
+- fix opensubtitles function</news>
     </extension>
 </addon>
 
